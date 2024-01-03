@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" href = "montyHallSim.css"> 
+    <script src="montyHallSim.js"></script>
+    <script> randomizeDoors() </script> 
+</head>
+
+<body>
+    <h1>Monty Hall Problem Simulation</h1>
+    <p>
+        Description: The Monty Hall problem is a famous probability puzzle named after the "Let's Make a Deal" game show host Monty Hall. 
+        The scenario involves a contestant who is presented with three doors: behind one is a car and behind the other two are goats. 
+        The contestant chooses one of the doors in an attempt to find the car. 
+        Then, the host, who knows what is behind each door, opens one of the other two doors to reveal a goat. 
+        The contestant is asked whether they would like to stick with their original choice or switch to the remaining unopened door. 
+    </p>
+        
+    <p>
+        Below is a simulation of the problem. 
+        Play to see whether there is a higher chance of winning when sticking to the original choice or when switching doors.  
+    </p>
+
+    <p id = "select">
+        Select a door:
+    </p>
+
+    <h3 id = "won"> You won the car! </h3>
+    <h3 id = "lost"> You did not win the car :( </h3>
+
+    <div class="container">
+        <div id="door1" class="door" >
+            <div id = "doorf1" class="door-front" onclick="setClickedDoor(this.id)">
+            <div class="knob"></div>
+            </div>
+            <div id = "doorb1" class="door-back"> </div>
+        </div>
+        <div id="door2" class="door" >
+            <div id = "doorf2" class="door-front" onclick="setClickedDoor(this.id)">
+            <div class="knob"></div>
+            </div>
+            <div id = "doorb2" class="door-back"></div>
+        </div>
+        <div id="door3" class="door">
+            <div id = "doorf3" class="door-front" onclick="setClickedDoor(this.id)">
+            <div class="knob"></div>
+            </div>
+            <div id = "doorb3" class="door-back"></div>
+        </div>
+    </div>
+    
+    <div class="stage"> stage </div>
+</body>
+
+</html>
